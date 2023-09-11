@@ -1,0 +1,263 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="expires" content="-1" />
+    <meta
+      name="viewport"
+      content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"
+    />
+    <title>DMC Hotspot > Register</title>
+    <style type="text/css">
+      body {
+        background-color: #ff5b5b;
+        color: #ffffff;
+        font-size: 10px;
+        font-family: sans-serif;
+        background-image: url("img/background.png");
+        background-size: fill;
+        background-position: top center;
+        background-repeat: no-repeat;
+      }
+
+      .main {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .main .logo {
+        margin: 16px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .main .content {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+      }
+
+      .main .content .register-form {
+        box-sizing: border-box;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+        gap: 10px;
+      }
+
+      .main .content .register-form h1 {
+        font-size: 4em;
+      }
+
+      .main .content .register-form p {
+        font-size: 2em;
+      }
+
+      .main .content .register-form .input-form {
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .main .content .register-form .input-form input {
+        box-sizing: border-box;
+        border: none;
+        background-color: white;
+        border-radius: 12px;
+        padding: 18px;
+        flex: 1;
+      }
+
+      .main .content .register-form .checkbox-form {
+        box-sizing: border-box;
+        display: flex;
+        gap: 10px;
+      }
+
+      .main .content .register-form .checkbox-form p {
+        font-size: 1.5em;
+      }
+
+      .main .content .register-form button {
+        width: 100%;
+        border: none;
+        background-color: white;
+        border-radius: 12px;
+        padding: 12px;
+        cursor: pointer;
+      }
+
+      .main .content .illustration {
+        display: flex;
+        justify-content: center;
+      }
+
+      .main .content .illustration img {
+        object-fit: scale-down;
+      }
+
+      @media (min-width: 768px) {
+        .main .content .register-form {
+          padding: 64px;
+        }
+        .main .content .illustration {
+          flex: 1;
+          display: flex;
+          justify-content: center;
+        }
+      }
+
+      @media (max-width: 767px) {
+        .main .content .register-form .input-form input {
+          flex-basis: 100%;
+        }
+        .main .content .register-form {
+          padding: 12px;
+        }
+        .main .content .illustration {
+          display: none;
+        }
+      }
+
+      body footer {
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 32px;
+      }
+
+      body footer p {
+        font-size: 1.5em;
+        padding: 0px;
+      }
+
+      body footer .legal {
+        font-size: 1.5em;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      body footer .legal a {
+        text-decoration: none;
+        color: rgb(0, 63, 209);
+      }
+
+      body footer .legal a :hover {
+        text-decoration: none;
+        color: rgb(0, 63, 209);
+      }
+
+      body footer .legal a :visited {
+        text-decoration: none;
+        color: rgb(80, 133, 255);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="main">
+      <div class="logo">
+        <img
+          src="img/img_dmc_logo.png"
+          alt="djakarta mining club"
+          width="48px"
+        />
+        <h2>DJAKARTA MINING CLUB</h2>
+      </div>
+      <div class="content">
+        <div class="register-form">
+          <h1>Register User</h1>
+          <p>Please fill all section to create a username</p>
+          <form name="login" action="http://192.168.2.2/login/process.php" method="post"
+					    $(if chap-id) onSubmit="return doLogin()" $(endif)>
+						<input type="hidden" name="dst" value="$(link-orig)" />
+						<input type="hidden" name="popup" value="true" />
+						<input type="hidden" name="mac"  value="$(mac)"/> <!-- Add this line -->
+            <div class="input-form">
+              <input
+                name="name"
+                type="text"
+                placeholder="Your Fullname"
+                required
+              />
+              <input
+                name="phone"
+                type="text"
+                placeholder="Your Phone Number"
+                required
+              />
+            </div>
+            <br />
+            <div class="input-form">
+              <input
+                name="company"
+                type="text"
+                placeholder="Your Company Name"
+                required
+              />
+              <input
+                name="job"
+                type="text"
+                placeholder="Your Job Title"
+                required
+              />
+            </div>
+            <br />
+
+            <div class="input-form">
+              <input
+                name="username"
+                type="text"
+                placeholder="Your Email for Login Wifi"
+                required
+              />
+              <input
+                name="password"
+                type="password"
+                placeholder="Your Password for Login Wifi"
+                required
+              />
+            </div>
+            <br />
+            <div class="checkbox-form">
+              <input name="member" type="checkbox" />
+              <p>
+                I am also willing to be registered as a member of Coal Club
+                Indonesia
+              </p>
+            </div>
+            <div class="checkbox-form">
+              <input name="newsletter" type="checkbox" />
+              <p>
+                I am also willing explore marketing opportunities for my company
+                through this mining club
+              </p>
+            </div>
+            <br />
+            <br />
+            <button type="submit"> <span style="color: black;">REGISTER</span> </button>
+          </form>
+          <br />
+        </div>
+        <div class="illustration">
+          <img src="img/ill_wifi_signup.png" alt="Wifi" width="80%" />
+        </div>
+      </div>
+      <footer>
+        <p>© Djakarta Mining Club</p>
+        <div class="legal">
+          <a href="">Privacy</a>
+          <a href="">Terms</a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
